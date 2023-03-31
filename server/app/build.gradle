@@ -22,6 +22,17 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
 }
 
+appengine {
+    run {
+        port = 8080
+    }
+    deploy {
+        projectId = 'kintai-378808'
+        // GCLOUD_CONFIG を指定すると gcloud がデプロイごとに勝手にバージョンを付与してくれる
+        version = 'GCLOUD_CONFIG'
+    }
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
