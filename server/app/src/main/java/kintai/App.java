@@ -3,7 +3,13 @@
  */
 package kintai;
 
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+
+@Path("/")
 public class App {
+
+    @GET
     public String getGreeting() {
         return "Hello World!";
     }
