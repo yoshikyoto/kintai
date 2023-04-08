@@ -20,6 +20,7 @@
     "node": ">=14.0"
   },
   "dependencies": {
+    "@cdktf/provider-google": "^5.0.14",
     "cdktf": "^0.15.5",
     "constructs": "^10.1.304"
   },
