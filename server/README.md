@@ -11,4 +11,4 @@
   * src/main
     * java/kintai -- ソースコード本体
     * webapp/WEB-INF -- servlet の設定ファイルなど
-      * Google App Engine もこの設定ファイルを参照します
+    * appengine -- Google App Engine デプロイ設定ファイル
