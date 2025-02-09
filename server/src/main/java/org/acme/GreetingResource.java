@@ -1,17 +1,16 @@
-package kintai.api.handler;
-
+package org.acme;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("/")
-public class RootHandler {
+@Path("/hello")
+public class GreetingResource {
+
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    @Path("")
     public String hello() {
-        return "Hello World";
+        return "Hello from Quarkus REST";
     }
 }
