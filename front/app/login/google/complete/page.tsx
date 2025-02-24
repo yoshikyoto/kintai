@@ -11,12 +11,12 @@ export default function GoogleLoginComplete() {
     const code = searchParams.get('code');
 
     if (code) {
-      fetch('http://localhost:8080/login/google', {
+      fetch(process.env.NEXT_SERVER_API_URL + '/login/google', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ code }),
+        body: JSON.stringify({ code: code }),
       })
         .then((response) => {
           if (response.ok) {
