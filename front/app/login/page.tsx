@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <h1>ログイン</h1>
       <a href={`https://accounts.google.com/o/oauth2/v2/auth?client_id=${googleApiKey}&redirect_uri=${encodeURIComponent(
-        'redirectUrl'
+        redirectUrl
       )}&response_type=code&scope=openid%20profile%20email`}>
         Googleでログイン
       </a>
