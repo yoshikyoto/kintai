@@ -16,7 +16,7 @@ dependencies {
     testImplementation 'io.quarkus:quarkus-junit5'
     // HTTP のエンドポイントをテストするためのライブラリ
     testImplementation 'io.rest-assured:rest-assured'
-
+    implementation 'com.googlecode.objectify:objectify:6.1.3'
 
 }
 
