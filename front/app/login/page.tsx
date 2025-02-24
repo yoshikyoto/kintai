@@ -1,8 +1,12 @@
+'use client';
+
 import Link from 'next/link';
+import environmentValueGetter from '@/utils/EnvironmentValueGetter';
 
 export default function Home() {
-  const googleApiKey = "594257163006-vjl4qre2a74uokpv290nuk9smqh3ium5.apps.googleusercontent.com";
-  const redirectUrl = "http://localhost:3000/login/google/complete";
+  const googleApiKey = environmentValueGetter.getGoogleClientId() || "";
+  const frontendBaseUrl = environmentValueGetter.getFrontendBaseUrl() || "";
+  const redirectUrl = frontendBaseUrl + "/login/google/complete";
 
   return (
     <>
