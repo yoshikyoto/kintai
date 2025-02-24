@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import EnvironmentValueGetter from '@/utils/EnvironmentValueGetter';
 
 export default function GoogleLoginComplete() {
   const searchParams = useSearchParams();
@@ -9,9 +10,10 @@ export default function GoogleLoginComplete() {
 
   useEffect(() => {
     const code = searchParams.get('code');
+    const apiUrl = EnvironmentValueGetter.getApiServerBaseUrl();
 
-    if (code) {
-      fetch(process.env.NEXT_SERVER_API_URL + '/login/google', {
+    if (code && apiUrl) {
+      fetch(apiUrl + '/login/google', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
